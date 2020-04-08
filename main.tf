@@ -10,8 +10,8 @@ data "aws_iam_role" "tools_codebuild_role" {
 resource "aws_codebuild_project" "main" {
   build_timeout = "5"
   description   = "TBD"
-  name          = "${var.environment}-${var.app_name}-website-build"
   provider      = aws.tools
+  name          = "${var.environment}-${var.app_name}-website-build"
   service_role  = data.aws_iam_role.tools_codebuild_role.arn
 
   artifacts {
