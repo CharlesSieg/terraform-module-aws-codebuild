@@ -64,7 +64,7 @@ resource "aws_codebuild_project" "main" {
     Billing     = "${var.environment}-${var.app_name}"
     Environment = var.environment
     Name        = "${var.environment}-${var.app_name}-website-build"
-    Terraform   = "true"
+    Terraform   = true
   }
 }
 
